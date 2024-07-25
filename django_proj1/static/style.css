@@ -1,0 +1,15 @@
+h1 {
+    color: brown;
+    background-color: burlywood;
+}
+div {
+    color: rgb(253, 204, 214);
+    background-color: rgb(15, 108, 247);
+}
+span {
+    color: red;
+    background-color: rgb(98, 248, 85);
+}
+nav {
+    color: rgb(188, 158, 245);
+}

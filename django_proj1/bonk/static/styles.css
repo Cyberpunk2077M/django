@@ -1,0 +1,66 @@
+@import url("https://fonts.googleapis.com/css2?family=Sixtyfour&family=Ubuntu&display=swap");
+* {
+  font-family: "Sixtyfour", sans-serif;
+  font-family: "Ubuntu", sans-serif;
+}
+.parent {
+  background-color: rgb(138, 190, 173);
+  width: 400px;
+  height: 600px;
+  border-radius: 25px;
+  position: absolute;
+  top: 10vh;
+  left: 10vh;
+}
+div img {
+  border-radius: 25px;
+  width: 389px;
+  height: auto;
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  box-shadow: 0px 0px 10px rgb(1, 65, 44);
+}
+div span {
+  border: 1px solid darkslategray;
+  border-radius: 50px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  color: darkslategray;
+}
+.ca {
+  position: absolute;
+  top: 240px;
+  left: 20px;
+  box-shadow: 0px 0px 7px rgb(1, 49, 37);
+}
+.cb {
+  position: absolute;
+  top: 240px;
+  left: 121px;
+  box-shadow: 0px 0px 7px rgb(1, 49, 37);
+}
+h1 {
+  position: absolute;
+  top: 280px;
+  left: 15px;
+  text-shadow: 3px 3px 10px #343a38ad;
+}
+h3 {
+  position: absolute;
+  top: 340px;
+  left: 15px;
+  font-weight: 200;
+}
+.box {
+  background-color: rgb(94 181 149);
+  position: absolute;
+  top: 535px;
+  left: 144px;
+  color: rgb(7 54 37);
+  border-radius: 30px;
+  margin: 0px;
+  padding: 10px;
+}
