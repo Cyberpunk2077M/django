@@ -1,6 +1,11 @@
 from django.shortcuts import render
 from .models import cartype
-# Create your views here.
+from django.shortcuts import get_object_or_404
+
 def bonkfn1(request):
     cars = cartype.objects.all()
-    return render(request, 'bonk/index_bonk.html', {'cars': cartype})
+    return render(request, 'bonk/index_bonk.html', {'cartype': cars})
+
+def car_details(request, car_id):
+    car = get_object_or_404(cartype, pk=car_id)
+    return render(request, 'bonk/cardetail.html', {'cartype': car, 'car_id': car_id})

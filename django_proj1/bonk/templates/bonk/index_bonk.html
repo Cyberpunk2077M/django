@@ -4,12 +4,26 @@
 BONK
 {% endblock %}
 
+{% block nav %}
+<h2 class="bg-red-950 p-1">Home About Contacts</h2>
+{% endblock %}
+
 {% block content %}
-<h1>this is BONK</h1>
-{% for bonk in cartype %}
-<div class ="carsold">
-  <img src={{cartype.image.url}} alt="">
-  <h3>{{cartype.name}}</h3>
+<h1 class="p-1">This is the list of some cars from Forza Horizon 5 from BONK</h1>
+
+<div class="grid grid-cols-3 gap-4 m-2">
+{% for car in cartype %}
+<div class="bg-pink-700 rounded p-1">
+  <img class="rounded shadow-lg" src="{{ car.image.url }}" >
+  <h3 class="shadow-lg">{{ car.name }}</h3>
+  <p>Car ID: {{ car.id }}</p> <!-- Debugging line -->
+  <a href="{% url 'car_details' car_id=car.id %}">View Details</a>
+  <button
+    type="button"
+    class="inline-flex items-center justify-center w-[100%] px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-orange-pink-300 hover:bg-pink-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-500">
+      {{ car.power }} - {{ car.brand }}
+  </button>
 </div>
 {% endfor %}
+</div>
 {% endblock %}
