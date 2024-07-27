@@ -9,3 +9,7 @@ def bonkfn1(request):
 def car_details(request, car_id):
     car = get_object_or_404(cartype, pk=car_id)
     return render(request, 'bonk/cardetail.html', {'cartype': car, 'car_id': car_id})
+
+def blog(request):
+    posts = BlogPost.objects.all()
+    return render(request, 'bonk/blog.html', {'posts': posts})

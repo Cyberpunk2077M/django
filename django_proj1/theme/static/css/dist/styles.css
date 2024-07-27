@@ -820,14 +820,6 @@ select {
   width: 100%;
 }
 
-.w-\[10\%\] {
-  width: 10%;
-}
-
-.w-\[auto\] {
-  width: auto;
-}
-
 .grid-cols-3 {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
@@ -856,13 +848,13 @@ select {
   border-width: 1px;
 }
 
-.border-transparent {
-  border-color: transparent;
-}
-
 .border-red-300 {
   --tw-border-opacity: 1;
   border-color: rgb(252 165 165 / var(--tw-border-opacity));
+}
+
+.border-transparent {
+  border-color: transparent;
 }
 
 .bg-cyan-400 {
@@ -885,11 +877,6 @@ select {
   background-color: rgb(69 10 10 / var(--tw-bg-opacity));
 }
 
-.bg-red-500 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(239 68 68 / var(--tw-bg-opacity));
-}
-
 .p-1 {
   padding: 0.25rem;
 }
@@ -902,11 +889,6 @@ select {
 .py-2 {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
-}
-
-.px-10 {
-  padding-left: 2.5rem;
-  padding-right: 2.5rem;
 }
 
 .font-serif {

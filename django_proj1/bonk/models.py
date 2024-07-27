@@ -19,3 +19,9 @@ class cartype(models.Model):
     type= models.CharField(max_length=3, choices=CLASS)
     description = models.TextField(default='')
     nationality= models.TextField(default='unavailable')
+
+class BlogPost(models.Model):
+    title = models.CharField(max_length=200)
+    content = models.TextField()
+    published_date = models.DateTimeField(auto_now_add=True)
+    image = models.ImageField(upload_to='blog_images/', null=True, blank=True)
