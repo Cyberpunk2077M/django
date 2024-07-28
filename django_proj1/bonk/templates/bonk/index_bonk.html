@@ -15,9 +15,9 @@ BONK
 {% for car in cartype %}
 <div class="bg-pink-700 rounded p-1">
   <img class="rounded shadow-lg" src="{{ car.image.url }}" >
-  <h3 class="shadow-lg">{{ car.name }}</h3>
+  <h3 class="bg-pink-600 rounded text-2xl font-bold">{{ car.name }}</h3>
   <p>Car ID: {{ car.id }}</p> <!-- Debugging line -->
-  <a href="{% url 'car_details' car_id=car.id %}">View Details</a>
+  <a href="{% url 'car_details' car_id=car.id %}" class="inline-flex items-center justify-center w-[100%] px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-orange-pink-300 hover:bg-pink-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-500">View Details</a>
   <button
     type="button"
     class="inline-flex items-center justify-center w-[100%] px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-orange-pink-300 hover:bg-pink-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-500">

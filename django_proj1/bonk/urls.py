@@ -3,6 +3,5 @@ from . import views
 
 urlpatterns = [
     path('', views.bonkfn1, name='bonk_function'),
-    path('', views.blog, name='blog'),
     path('bonk/<int:car_id>/', views.car_details, name='car_details'),
 ]
