@@ -1,5 +1,6 @@
 from django.db import models
 from django.utils import timezone
+from django.contrib.auth.models import User
 # Create your models here.
 class cartype(models.Model):
     CLASS = [
@@ -22,3 +23,13 @@ class cartype(models.Model):
 
 def __str__(self):
     return self.name
+
+class Car_Review(models.Model):
+    car=models.ForeignKey(cartype, on_delete=models.CASCADE, related_name='review')
+    buyer=models.ForeignKey(User, on_delete=models.CASCADE)
+    rating=models.IntegerField(default=0)
+    experience=models.TextField(default='')
+    date_added=models.DateTimeField(default=timezone.now)
+
+def __str__(self):
+    return f'{self.user.username} review for {self.cartype.name}'
