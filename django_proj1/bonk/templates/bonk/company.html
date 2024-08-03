@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+{% load static %}
+{% block title %}
+Brand Details
+{% endblock %}
+
+{% block nav %}
+<h2 class= "bg-red-950 p-1">Details about the car</h2>
+{% endblock %}
+
+{% block content %}
+<h1 class="p-1">This is the details of the car from Forza Horizon 5 by BONK</h1>
+<h2 class="bg-pink-700 text-pink-200 text-3xl p-1"><u>{{car.brand}}</u></h2>
+<h2 class="bg-pink-700 text-pink-200 text-3xl p-1"><u>{{car.name}}</u></h2>
+
+{% endblock %}
