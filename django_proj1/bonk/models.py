@@ -42,7 +42,7 @@ class dealership(models.Model):
     carname=models.ManyToManyField(cartype, verbose_name="dealerships")
 
 def __str__(self):
-    return f"{self.cartype.name}"
+    return f"{self.name} {self.cartype.name}"
 
 #One to One
 class regno(models.Model):
