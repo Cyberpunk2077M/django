@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+
+{% block title %}
+This is Twitter project using django
+{% endblock  %}
+
+{% block content %}
+<h1 class=' text-center text=2xl'>Here is the content for the project...</h1>
+<a class="btn btn-outline-info" href="{% url 'tweet_create' %}">Create</a>
+<div class="container row gap-3">
+    {% for tweet in tweets %}
+    <div class="card" style="width: 22rem; margin-top: 10px;">
+        <h5 class="card-title my-2">{{tweet.user.username}}</h5>
+        <img src="{{tweet.image.url}}" class="card-img-top rounded" alt="...">
+        <div class="card-body">
+          <p class="card-text">{{tweet.text}}</p>
+          <a href="{% url 'tweet_edit' tweet.id %}" class="btn btn-outline-primary">Edit</a>
+          <a href="{% url 'tweet_delete' tweet.id %}" class="btn btn-outline-danger">Delete</a>
+        </div>
+      </div>
+    {% endfor %}
+</div>
+{% endblock %}
