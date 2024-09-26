@@ -21,8 +21,8 @@ class cartype(models.Model):
     description = models.TextField(default='')
     nationality= models.TextField(default='unavailable')
 
-def __str__(self):
-    return f"{self.brand}{self.name}"
+    def __str__(self):
+        return f"{self.brand} {self.name} {self.type}"
 
 #one to many:
 class Car_Review(models.Model):
@@ -32,8 +32,8 @@ class Car_Review(models.Model):
     experience=models.TextField(default='')
     date_added=models.DateTimeField(default=timezone.now)
 
-def __str__(self):
-    return f'{self.user.username} review for {self.cartype.name}'
+    def __str__(self):
+        return f'{self.user.username} review for {self.cartype.name}'
 
 #many to many
 class dealership(models.Model):
@@ -41,8 +41,8 @@ class dealership(models.Model):
     location=models.CharField(max_length=100)
     carname=models.ManyToManyField(cartype, verbose_name="dealerships")
 
-def __str__(self):
-    return f"{self.name} {self.cartype.name}"
+    def __str__(self):
+        return f"{self.name}"
 
 #One to One
 class regno(models.Model):
@@ -50,5 +50,5 @@ class regno(models.Model):
     reg_no=models.CharField(max_length=8)
     reg_date=models.DateField(auto_now=True)
 
-def __str__(self):
-    return f'Registration no. for {self.cartype.name}'
+    def __str__(self):
+        return f'Registration no. for {self.car}'

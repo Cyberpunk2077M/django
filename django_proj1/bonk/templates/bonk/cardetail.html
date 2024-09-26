@@ -10,12 +10,12 @@ Car Details
 
 {% block content %}
 <h1 class="p-1">This is the details of the car from Forza Horizon 5 by BONK</h1>
-<h2 class="bg-pink-700 text-pink-200 text-3xl p-1"><u>{{car.brand}}</u></h2>
-<h2 class="bg-pink-700 text-pink-200 text-1xl p-1"><u>{{car.name}}</u></h2>
+<h1 class="bg-pink-700 text-pink-200 text-3xl p-1"><u>{{car.brand}}</u></h1>
+<h1 class="bg-pink-700 text-pink-200 text-2xl p-1"><u>{{car.name}}</u></h1>
 <img class="rounded shadow-lg bg-pink-700 rounded p-1" src="{{ car.image.url }}" width=500>
-<h3><u class="bg-pink-700 text-1xl rounded p-0.5 m-0.3">Birthplace:</u>{{car.nationality}}</h3>
-<h3><u class="bg-pink-700 text-1xl rounded p-0.5 m-0.3">Peak Power:</u>{{car.power}}HP</h3>
-<h3><u class="bg-pink-700 text-1xl rounded p-0.5 m-0.3">Car Class:</u>{{car.type}}</h3>
-<h3><u class="bg-pink-700 text-1xl rounded p-0.5 m-0.3">Details:</u>{{car.description}}</h3>
+<h2><u class="bg-pink-700 text-2xl rounded p-0.5 m-0.3">Birthplace:</u><br></h2><pre>       {{car.nationality}}</pre>
+<h2><u class="bg-pink-700 text-2xl rounded p-0.5 m-0.3">Peak Power:</u><br></h2><pre>       {{car.power}}HP</pre>
+<h2><u class="bg-pink-700 text-2xl rounded p-0.5 m-0.3">Car Class:</u><br></h2><pre>        {{ car.get_type_display }}</pre>
+<h2><u class="bg-pink-700 text-2xl rounded p-0.5 m-0.3">Details:</u><br></h2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{car.description}}
 
 {% endblock %}
